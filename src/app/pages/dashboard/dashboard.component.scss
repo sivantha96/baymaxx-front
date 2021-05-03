@@ -1,0 +1,45 @@
+.drawer-container {
+  width: 270px;
+}
+
+.badge {
+  position: absolute;
+  right: 22px;
+  background: red;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px !important;
+  color: wheat;
+  font-weight: 600 !important;
+  border-radius: 25px;
+}
+
+.placeholder {
+  &__container {
+    margin: auto;
+    padding-top: 35vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__image {
+    width: 15vw;
+  }
+
+  &__heading {
+    font-size: 20px;
+    font-weight: 300;
+    opacity: 0.8;
+    margin-top: 20px;
+    margin-bottom: 8px;
+
+    &__sub {
+      font-size: 14px;
+      font-weight: 300;
+      opacity: 0.8;
+    }
+  }
+}

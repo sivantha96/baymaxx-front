@@ -1,0 +1,31 @@
+<app-header (onToggle)="drawer.toggle()"></app-header>
+<mat-drawer-container autosize>
+  <mat-drawer
+    mode="over"
+    opened="true"
+    #drawer
+    class="drawer-container"
+    mode="side"
+  >
+    <mat-selection-list [multiple]="false">
+      <mat-list-option
+        *ngFor="let option of drawerOptions"
+        [value]="option.id"
+        (click)="onClickDrawerOption(option)"
+        [selected]="selectedDrawerOption === option.id"
+      >
+        {{ option.name }}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-drawer>
+
+  <div class="container py-3" style="min-height: calc(100vh - 65px)">
+    <div *ngIf="selectedDrawerOption === -1" class="placeholder__container">
+      <img class="placeholder__image" src="assets/images/logo.png" />
+      <span class="placeholder__heading">Welcome</span>
+      <span class="placeholder__heading__sub"
+        >Select an Item From the Side Menu to Get Started</span
+      >
+    </div>
+  </div>
+</mat-drawer-container>
